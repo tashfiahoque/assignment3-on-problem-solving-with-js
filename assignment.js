@@ -3,8 +3,7 @@ function kilometerToMeter(kilometer) {
     if (kilometer > 0) {
         let meter = kilometer / 1000;
         return meter;
-    }
-    else {
+    } else {
         let meter = "Please Enter valid value.";
         return meter;
     }
@@ -27,7 +26,6 @@ function budgetCalculator(electronicGadget) {
 }
 
 //hotelCost function
-
 function hotelCost(totalNightStay) {
     let totalAmountToPay = 0;                              // totalAmountToPay in Tk
     if (totalNightStay <= 10 && totalNightStay > 0) {
@@ -60,5 +58,12 @@ function megaFriend(friendsName) {
         return "Please Enter values in friendsName array";
     }
 }
-
+let result = kilometerToMeter(5);
+console.log(result);
+let result1 = budgetCalculator([1, 1, 1]);
+console.log(result1);
+let result3 = hotelCost(22);
+console.log(result3);
+let result2 = megaFriend([]);
+console.log(result2);
 
