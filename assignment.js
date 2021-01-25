@@ -1,7 +1,9 @@
+// https://github.com/tashfiahoque/assignment3-on-problem-solving-with-js
+
 //kilometerToMeter conversion function
 function kilometerToMeter(kilometer) {
     if (kilometer > 0) {
-        let meter = kilometer / 1000;
+        let meter = kilometer * 1000;
         return meter;
     } else {
         let meter = "Please Enter valid value.";
@@ -10,18 +12,12 @@ function kilometerToMeter(kilometer) {
 }
 
 //budgetCalculator function
-let electronicGadget = [1, 1, 2];                                                           // Here electronicGadget = ["watch", "phone", "laptop"].All values in units
-function budgetCalculator(electronicGadget) {
-    if (electronicGadget && electronicGadget.length) {
-        for (let arr of electronicGadget) {                                                  // To avoid negative input
-            if (arr < 0)
-                return "Please Enter valid value";
-        }
-        let i = 0;
-        let totalPrice = (electronicGadget[i] * 50) + (electronicGadget[i + 1] * 100) + (electronicGadget[i + 2] * 500);   // 50, 100, 500 are amounts in Tk
-        return totalPrice;
+function budgetCalculator(x, y, z) {                       // Here x = no. of watch, y = no. of phone, z = no. of laptop                                                // To avoid negative input
+    if (x < 0 || y < 0 || z < 0) {
+        return "Please Enter valid value";
     } else {
-        return "Please Enter values in electronicGadget array";
+        let totalPrice = (x * 50) + (y * 100) + (z * 500);   // 50, 100, 500 are amounts in Tk
+        return totalPrice;
     }
 }
 
@@ -58,12 +54,4 @@ function megaFriend(friendsName) {
         return "Please Enter values in friendsName array";
     }
 }
-let result = kilometerToMeter(5);
-console.log(result);
-let result1 = budgetCalculator([1, 1, 1]);
-console.log(result1);
-let result3 = hotelCost(22);
-console.log(result3);
-let result2 = megaFriend([]);
-console.log(result2);
 
